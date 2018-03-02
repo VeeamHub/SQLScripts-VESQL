@@ -13,7 +13,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Project Notes
-Author: Rick Vanover [a link] (https://www.twitter.com/rickvanover)
+Author: Rick Vanover - Tweet me (https://www.twitter.com/rickvanover) or email rick.vanover@veeam.com 
 
 Function: These SQL Scripts will allow you to learn capabilities of Veeam Explorer for SQL Server (VESQL) by generating random data and delete events.
 
@@ -33,7 +33,7 @@ Many production database server implementations use other disk and folder arrang
 
 •	1vesql_createdb.sql – This will create a database named SQLGREENDREAM. In this database is no data, but tables are in place for the random data. This will make a database and log file size of approximately 20 MB each. This also will create two stored procedures, one to insert a row or random date – the other to delete a row of random data. 
 
-•	2vesql_createview_and_data_generator.sql – This creates a view and a random data generator function outlined from [a link](http://vadivel.blogspot.com) http://vadivel.blogspot.com, a former SQL Server MVP.
+•	2vesql_createview_and_data_generator.sql – This creates a view and a random data generator function outlined from http://vadivel.blogspot.com, a former SQL Server MVP.
 
 •	3vesql_sqlserveragentjob.sql – This script will create a SQL Server Agent job that will insert 2 records of random data into the dbo.tblEmployee table. **NOTE**  On line 31, replace “DOMAIN\username” with an Active Directory username currently being used to run these scripts in SQL Server Management Studio. This script will fail with a message similar to: “The specified '@owner_login_name' is invalid (valid values are returned by sp_helplogins [excluding Windows NT groups])” if this step is omitted.
 The result is that every 12 minutes, 2 records will be inserted into the SQLGREENDREAM database and then 1 record deleted. This makes for a nice learning mechanism in Veeam Explorer for SQL Server restore tasks to see a ‘drop’ of a data record to use as a simulation of restore activity with VESQL.
