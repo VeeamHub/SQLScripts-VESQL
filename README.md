@@ -29,7 +29,7 @@ This works on all modern versions of Microsoft SQL Server (up to SQL 2017) with 
 
 Many production database server implementations use other disk and folder arrangements; so this is a good way to distinguish between production databases and this test database. If a drive letter other than S:\ must be used, change the two instances of S:\SQLDATA\ to a desired path in the first SQL script. 
 
-#The following scripts are in this repository and should be run in this order:
+# The following scripts are in this repository and should be run in this order:
 
 •	1vesql_createdb.sql – This will create a database named SQLGREENDREAM. In this database is no data, but tables are in place for the random data. This will make a database and log file size of approximately 20 MB each. This also will create two stored procedures, one to insert a row or random date – the other to delete a row of random data. 
 
