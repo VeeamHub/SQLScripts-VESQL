@@ -17,7 +17,7 @@ Author: Rick Vanover - Tweet me (https://www.twitter.com/rickvanover) or email r
 
 Function: These SQL Scripts will allow you to learn capabilities of Veeam Explorer for SQL Server (VESQL) by generating random data and delete events.
 
-This works on all modern versions of Microsoft SQL Server (up to SQL 2017) with the database services engine in place. A few things are required to make the scripts work, namely a drive path for SQL data and log storage. This test data is built with the following storage requirements:
+This works on all modern versions of Microsoft SQL Server (up to SQL 2017) with the database services engine in place. The SQL Server Agent service needs to be running (either manually for the testing or automatically set to start as a service). A few things are required to make the scripts work, namely a drive path for SQL data and log storage. This test data is built with the following storage requirements:
 
 •	Have an S: drive
 
